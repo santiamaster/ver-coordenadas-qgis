@@ -1,15 +1,23 @@
 [general]
 name=Ver Coordenadas
-description=Displays and copies vertex coordinates, polygon areas and line lengths directly from vector features.
+description=Consulta y copia coordenadas de vértices, áreas de polígonos y longitudes de líneas directamente desde entidades vectoriales.
 version=1.0.0
 qgisMinimumVersion=4.2
 author=Secretaría de Minería de Salta - Carlos Daniel Santiápichi Mastrolinardo
 email=mineriayenergia@produccionsalta.gob.ar
-about=Plugin para consultar coordenadas y medidas de Polygon, MultiPolygon, LineString y MultiLineString. En CRS proyectados ofrece Gauss-Krüger y coordenadas tradicionales. En CRS geográficos ofrece DMS, DMM y DD y calcula medidas elipsoidales, mostrando un aviso para recordar que las superficies y longitudes planimétricas deben obtenerse desde un sistema de coordenadas plano. Incluye áreas de huecos y totales de multipartes.
+about=Complemento para consultar y copiar coordenadas y medidas de entidades Polygon, MultiPolygon, LineString y MultiLineString. En CRS proyectados permite mostrar coordenadas en orden Gauss-Krüger (norte, este) o tradicional (este, norte). En CRS geográficos ofrece formatos DMS, DMM y grados decimales, con mediciones elipsoidales mediante QgsDistanceArea y avisos específicos. También informa áreas netas, áreas de huecos y totales en geometrías multipartes.
 category=Vector
-tags=coordinates,vertices,polygon,line,gauss-kruger,dms,dmm,dd
-changelog=1.0.0 - Initial public release candidate based on the validated 0.3.1 feature set.
-    0.3.1 - Added adaptive geographic measurement warnings and publication-oriented metadata improvements.
-    0.3.0 - Added geographic coordinate formats and ellipsoidal measurements.
-experimental=True
+tags=coordinates,vertices,polygon,line,geometry,gauss-kruger,dms,dmm,dd
+homepage=https://github.com/santiamaster/ver-coordenadas-qgis
+repository=https://github.com/santiamaster/ver-coordenadas-qgis
+tracker=https://github.com/santiamaster/ver-coordenadas-qgis/issues
+icon=icon.png
+changelog=1.0.0 - Primera versión pública.
+    Incluye soporte para Polygon, MultiPolygon, LineString y MultiLineString.
+    Añade formatos de coordenadas proyectadas Gauss-Krüger y tradicionales.
+    Añade formatos geográficos DMS, DMM y grados decimales.
+    Incorpora mediciones elipsoidales para CRS geográficos y avisos adaptativos.
+    Informa áreas netas, áreas de huecos, longitudes y totales de geometrías multipartes.
+    Copia automáticamente coordenadas y medidas al portapapeles.
+experimental=False
 deprecated=False
