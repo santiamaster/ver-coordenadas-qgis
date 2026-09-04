@@ -1,18 +1,18 @@
-# Changelog
+# Historial de cambios
 
-All notable changes to **Ver Coordenadas** will be documented in this file.
+Todos los cambios relevantes de **Ver Coordenadas** se documentarán en este archivo.
 
 ## 1.0.0
 
-Initial public release candidate.
+Candidata a primera versión pública.
 
-- Adds the contextual **Ver coordenadas** action for line and polygon vector features.
-- Supports Polygon, MultiPolygon, LineString and MultiLineString geometries.
-- Lists vertices with continuous numbering and omits duplicated polygon closing vertices.
-- Identifies polygon holes and reports their individual areas.
-- Reports net polygon areas, multipart total areas, line lengths and multipart total lengths.
-- Supports projected-coordinate display as Gauss-Krüger `(norte, este)` or traditional `(este, norte)` order.
-- Supports geographic coordinates in DMS, DMM and decimal-degree formats.
-- Uses ellipsoidal measurements for geographic CRS through `QgsDistanceArea`.
-- Shows adaptive warnings for geographic area and length measurements.
-- Copies coordinates and measurements automatically to the clipboard.
+- Agrega la acción contextual **Ver coordenadas** para entidades vectoriales lineales y poligonales.
+- Soporta geometrías Polygon, MultiPolygon, LineString y MultiLineString.
+- Lista los vértices con numeración continua y omite los vértices de cierre duplicados de los polígonos.
+- Identifica los huecos de los polígonos y muestra sus áreas individuales.
+- Muestra áreas netas por polígono, áreas totales en geometrías multipartes, longitudes de líneas y longitudes totales en geometrías multipartes.
+- Soporta la presentación de coordenadas proyectadas en orden Gauss-Krüger `(norte, este)` o tradicional `(este, norte)`.
+- Soporta coordenadas geográficas en formatos DMS, DMM y grados decimales.
+- Utiliza mediciones elipsoidales para CRS geográficos mediante `QgsDistanceArea`.
+- Muestra advertencias adaptativas para mediciones de superficie y longitud sobre CRS geográficos.
+- Copia automáticamente las coordenadas y las medidas al portapapeles.
