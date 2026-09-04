@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Operating systems
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Build and release artifacts
+build/
+dist/
+*.zip
+
+# QGIS temporary/local files
+*.qgz~
+*.qgs~
