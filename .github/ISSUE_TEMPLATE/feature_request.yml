@@ -1,0 +1,49 @@
+name: Solicitar una mejora
+description: Proponga una nueva función o una mejora para Ver Coordenadas.
+title: "[Mejora]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por proponer una mejora. Describa el problema que desea resolver y el comportamiento que le resultaría útil.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema o necesidad
+      description: Explique qué problema, limitación o necesidad motivó esta propuesta.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Mejora propuesta
+      description: Describa cómo le gustaría que funcionara la mejora.
+    validations:
+      required: true
+
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Caso de uso
+      description: Indique en qué situación concreta utilizaría esta mejora.
+    validations:
+      required: true
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Ejemplos, capturas o referencias
+      description: Agregue ejemplos, capturas o referencias si ayudan a explicar la propuesta.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Confirmación
+      options:
+        - label: La propuesta está relacionada directamente con las funciones de Ver Coordenadas.
+          required: true
