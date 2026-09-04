@@ -203,6 +203,10 @@ El formulario de mejoras solicita describir la necesidad, la mejora propuesta, e
 
 Para consultas institucionales que no correspondan a un error o solicitud de mejora, puede utilizar el correo **mineriayenergia@produccionsalta.gob.ar**.
 
+## Desarrollo y contribuciones
+
+La documentación para desarrolladores se mantiene separada de esta guía de uso. Si desea estudiar el código, preparar un entorno de desarrollo o contribuir mediante Pull Request, consulte [`CONTRIBUTING.md`](CONTRIBUTING.md).
+
 ## Autoría
 
 **Secretaría de Minería de Salta**  
