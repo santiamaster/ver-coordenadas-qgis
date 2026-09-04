@@ -48,6 +48,10 @@ Una vez que **Ver Coordenadas** sea aprobado y publicado en el repositorio ofici
 5. Consultar los vértices y las medidas mostradas en la ventana.
 6. El contenido se copia automáticamente al portapapeles.
 
+<p align="center">
+  <img src="screenshots/01-acceso-ver-coordenadas.png" alt="Acceso a la acción Ver coordenadas desde QGIS" width="900">
+</p>
+
 ## Formatos de coordenadas
 
 El complemento detecta si el CRS de la capa es proyectado o geográfico y muestra las opciones correspondientes.
@@ -75,6 +79,10 @@ Ejemplo:
 ```
 
 Cambiar entre ambos formatos **no reproyecta la geometría**. Solo modifica el orden en que se presentan los componentes de cada coordenada.
+
+<p align="center">
+  <img src="screenshots/02-poligono-huecos.png" alt="Polígono proyectado con coordenadas Gauss-Krüger y huecos" width="520">
+</p>
 
 ### CRS geográficos
 
@@ -106,6 +114,10 @@ Los hemisferios se indican mediante:
 - **S**: Sur.
 - **E**: Este.
 - **W**: Oeste.
+
+<p align="center">
+  <img src="screenshots/03-crs-geografico.png" alt="Coordenadas geográficas en formato DMS con advertencia de medición" width="520">
+</p>
 
 ## Áreas y longitudes
 
@@ -167,6 +179,12 @@ Polígono 2
 El área mostrada para cada polígono es su **superficie neta**, es decir, el área exterior menos sus huecos. El área de cada hueco se muestra adicionalmente a modo informativo.
 
 En geometrías lineales multipartes se muestra la longitud de cada línea y una longitud total.
+
+<p align="center">
+  <img src="screenshots/04-multilinea.png" alt="Geometría MultiLineString con longitudes por parte y longitud total" width="520">
+</p>
+
+Las capturas adicionales disponibles en la carpeta [`screenshots/`](screenshots/) se conservan como referencia visual de otras funciones y variantes de presentación del complemento.
 
 ## Reportar errores o solicitar mejoras
 
