@@ -26,7 +26,7 @@ El código principal se encuentra en la carpeta `ver_coordenadas/`.
 - `warning.py`: define los avisos mostrados para mediciones realizadas sobre CRS geográficos.
 - `metadata.txt`: contiene los metadatos requeridos por QGIS.
 
-Las capturas de documentación se encuentran en `screenshots/` y las pruebas del proyecto se organizan en `tests/`.
+Las capturas de documentación se encuentran en `screenshots/` y la documentación de pruebas se organiza en `tests/`.
 
 ## Obtener el código fuente
 
@@ -96,7 +96,7 @@ Consulte el archivo [`LICENSE`](LICENSE) para conocer los términos completos.
 
 ## Pruebas
 
-La carpeta `tests/` reúne la documentación y las pruebas automatizadas del complemento.
+La carpeta `tests/` reúne la documentación de pruebas y alojará la batería automatizada del complemento.
 
 La batería formal de pruebas para la publicación 1.0.0 se completará durante la etapa de revisión técnica y calidad del proyecto. Como mínimo cubrirá:
 
