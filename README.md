@@ -188,18 +188,20 @@ Las capturas adicionales disponibles en la carpeta [`screenshots/`](screenshots/
 
 ## Reportar errores o solicitar mejoras
 
-Si encuentra un error o desea proponer una mejora, utilice el sistema de **Issues** del repositorio:
+El repositorio utiliza formularios estructurados de **GitHub Issues** para recibir reportes y propuestas:
 
-https://github.com/santiamaster/ver-coordenadas-qgis/issues
+https://github.com/santiamaster/ver-coordenadas-qgis/issues/new/choose
 
-Para facilitar el diagnóstico, incluya en lo posible:
+Al crear un Issue podrá elegir entre:
 
-- versión de QGIS;
-- sistema operativo;
-- CRS de la capa;
-- tipo de geometría;
-- pasos para reproducir el problema;
-- captura de pantalla o mensaje de error, si existe.
+- **Reportar un error**: para fallas reproducibles o resultados inesperados.
+- **Solicitar una mejora**: para nuevas funciones o cambios en el comportamiento del complemento.
+
+El formulario de errores solicita información como versión de QGIS, sistema operativo, versión del complemento, CRS de la capa, tipo de geometría, pasos para reproducir el problema, resultado esperado y resultado obtenido. También puede adjuntar capturas o pegar un traceback completo.
+
+El formulario de mejoras solicita describir la necesidad, la mejora propuesta, el caso de uso y cualquier ejemplo o referencia que ayude a entenderla.
+
+Para consultas institucionales que no correspondan a un error o solicitud de mejora, puede utilizar el correo **mineriayenergia@produccionsalta.gob.ar**.
 
 ## Autoría
 
