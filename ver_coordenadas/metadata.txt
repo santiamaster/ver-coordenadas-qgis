@@ -1,0 +1,15 @@
+[general]
+name=Ver Coordenadas
+description=Displays and copies vertex coordinates, polygon areas and line lengths directly from vector features.
+version=1.0.0
+qgisMinimumVersion=4.2
+author=Secretaría de Minería de Salta - Carlos Daniel Santiápichi Mastrolinardo
+email=mineriayenergia@produccionsalta.gob.ar
+about=Plugin para consultar coordenadas y medidas de Polygon, MultiPolygon, LineString y MultiLineString. En CRS proyectados ofrece Gauss-Krüger y coordenadas tradicionales. En CRS geográficos ofrece DMS, DMM y DD y calcula medidas elipsoidales, mostrando un aviso para recordar que las superficies y longitudes planimétricas deben obtenerse desde un sistema de coordenadas plano. Incluye áreas de huecos y totales de multipartes.
+category=Vector
+tags=coordinates,vertices,polygon,line,gauss-kruger,dms,dmm,dd
+changelog=1.0.0 - Initial public release candidate based on the validated 0.3.1 feature set.
+    0.3.1 - Added adaptive geographic measurement warnings and publication-oriented metadata improvements.
+    0.3.0 - Added geographic coordinate formats and ellipsoidal measurements.
+experimental=True
+deprecated=False
