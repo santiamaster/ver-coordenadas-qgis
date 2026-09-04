@@ -1,0 +1,102 @@
+name: Reportar un error
+description: Informe un problema reproducible en Ver Coordenadas.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por informar un problema. Complete la mayor cantidad de información posible para facilitar el diagnóstico.
+
+  - type: input
+    id: qgis_version
+    attributes:
+      label: Versión de QGIS
+      description: Indique la versión exacta de QGIS en la que ocurre el problema.
+      placeholder: "Ej.: QGIS 4.2.0"
+    validations:
+      required: true
+
+  - type: input
+    id: operating_system
+    attributes:
+      label: Sistema operativo
+      description: Indique el sistema operativo y, si es posible, su versión.
+      placeholder: "Ej.: Windows 11 24H2"
+    validations:
+      required: true
+
+  - type: input
+    id: plugin_version
+    attributes:
+      label: Versión de Ver Coordenadas
+      description: Indique la versión del complemento instalada.
+      placeholder: "Ej.: 1.0.0"
+    validations:
+      required: true
+
+  - type: input
+    id: layer_crs
+    attributes:
+      label: CRS de la capa
+      description: Indique el CRS de la capa donde se presenta el problema.
+      placeholder: "Ej.: EPSG:4326 o EPSG:22183"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: geometry_type
+    attributes:
+      label: Tipo de geometría
+      options:
+        - Polygon
+        - MultiPolygon
+        - LineString
+        - MultiLineString
+        - Otro / No estoy seguro
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Pasos para reproducir el problema
+      description: Describa, paso a paso, qué hizo antes de que apareciera el error.
+      placeholder: |
+        1. Abrir una capa...
+        2. Identificar una entidad...
+        3. Ejecutar Ver coordenadas...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Resultado esperado
+      description: Explique qué esperaba que ocurriera.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Resultado obtenido
+      description: Explique qué ocurrió realmente.
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Capturas, traceback o información adicional
+      description: Pegue aquí el mensaje de error completo o adjunte capturas de pantalla si dispone de ellas.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmación
+      options:
+        - label: Verifiqué que el problema ocurre con la versión indicada del complemento.
+          required: true
