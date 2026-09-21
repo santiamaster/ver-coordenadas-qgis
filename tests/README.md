@@ -44,3 +44,35 @@ Los casos `CUR-01`, `CUR-02`, `CRS-07` y `CRS-08` están marcados temporalmente 
 - rechazar CRS inválidos o unidades desconocidas antes de presentar medidas como metros o metros cuadrados.
 
 El Nivel B no se considerará verificado hasta ejecutar esta batería dentro de un entorno real de QGIS/PyQGIS.
+
+## Ejecución del Nivel C — integración Qt/QGIS
+
+Las pruebas del diálogo y del ciclo de vida del plugin deben ejecutarse dentro de QGIS 4.2, donde ya existe una aplicación Qt/QGIS activa.
+
+Desde la Consola Python de QGIS, con la raíz del repositorio agregada a `sys.path`, ejecutar:
+
+```python
+import unittest
+
+suite = unittest.defaultTestLoader.loadTestsFromNames([
+    "tests.test_dialog",
+    "tests.test_plugin",
+])
+
+runner = unittest.TextTestRunner(verbosity=2)
+result = runner.run(suite)
+```
+
+Resumen recomendado:
+
+```python
+print("Ejecutados:", result.testsRun)
+print("Fallos:", len(result.failures))
+print("Errores:", len(result.errors))
+print("Expected failures:", len(result.expectedFailures))
+print("Unexpected successes:", len(result.unexpectedSuccesses))
+```
+
+Después debe volver a ejecutarse la batería completa con `unittest` para comprobar que los niveles A, B y C conviven sin regresiones.
+
+El Nivel C no se considerará verificado hasta obtener una ejecución real en QGIS 4.2.
