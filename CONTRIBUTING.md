@@ -96,9 +96,9 @@ Consulte el archivo [`LICENSE`](LICENSE) para conocer los términos completos.
 
 ## Pruebas
 
-La carpeta `tests/` reúne la documentación de pruebas y alojará la batería automatizada del complemento.
+La carpeta `tests/` contiene la matriz formal y la batería automatizada del complemento.
 
-La batería formal de pruebas para la publicación 1.0.0 se completará durante la etapa de revisión técnica y calidad del proyecto. Como mínimo cubrirá:
+La versión 1.0.0 dispone de pruebas para:
 
 - formatos de coordenadas proyectadas;
 - DMS, DMM y DD;
@@ -107,9 +107,15 @@ La batería formal de pruebas para la publicación 1.0.0 se completará durante 
 - LineString y MultiLineString;
 - áreas y longitudes proyectadas;
 - mediciones geográficas;
-- advertencias adaptativas.
+- advertencias adaptativas;
+- ciclo de vida de la acción del plugin;
+- portapapeles y preferencias;
+- rechazo de geometrías curvas;
+- validación de CRS inválidos y unidades desconocidas.
 
-Hasta que esa batería quede formalizada en el repositorio, cualquier cambio debe validarse también dentro de una instalación real de QGIS.
+La matriz completa se encuentra en `tests/TEST_MATRIX.md`. La batería automatizada se ejecuta con `unittest`; los niveles que dependen de PyQGIS/Qt deben verificarse dentro de un entorno real de QGIS 4.2 o superior.
+
+Además de las pruebas automatizadas, los cambios que afecten al comportamiento visible del complemento deben validarse manualmente en QGIS.
 
 ## Reportar errores y proponer mejoras
 
