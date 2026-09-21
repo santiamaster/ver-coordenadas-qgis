@@ -124,7 +124,7 @@ La prueba manual final dentro de QGIS 4.2 sigue siendo obligatoria aunque todas 
 ## Estado
 
 - [x] Matriz definida.
-- [ ] Pruebas Nivel A implementadas.
+- [x] Pruebas Nivel A implementadas.
 - [ ] Pruebas Nivel B implementadas.
 - [ ] Pruebas Nivel C implementadas.
 - [ ] Pruebas manuales finales ejecutadas.
