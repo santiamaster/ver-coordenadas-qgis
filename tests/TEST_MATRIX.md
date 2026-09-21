@@ -125,7 +125,25 @@ La prueba manual final dentro de QGIS 4.2 sigue siendo obligatoria aunque todas 
 
 - [x] Matriz definida.
 - [x] Pruebas Nivel A implementadas.
-- [ ] Pruebas Nivel B implementadas.
+- [x] Pruebas Nivel B implementadas.
 - [ ] Pruebas Nivel C implementadas.
 - [ ] Pruebas manuales finales ejecutadas.
 - [ ] Hallazgos corregidos y regresiones verificadas.
+
+## Verificación del Nivel B
+
+Ejecutada manualmente dentro de QGIS 4.2 el 2026-09-21.
+
+- Pruebas del Nivel B: 25 ejecutadas.
+- Suite completa disponible: 51 ejecutadas.
+- Fallos: 0.
+- Errores: 0.
+- Expected failures: 4.
+- Unexpected successes: 0.
+
+Los cuatro `expected failure` corresponden a los hallazgos conocidos que se corregirán en la fase 6.4:
+
+- `CUR-01`: CircularString debe rechazarse en 1.0.0.
+- `CUR-02`: CurvePolygon debe rechazarse en 1.0.0.
+- `CRS-07`: CRS inválido debe rechazarse antes de informar unidades métricas.
+- `CRS-08`: unidades proyectadas desconocidas deben rechazarse antes de informar unidades métricas.
