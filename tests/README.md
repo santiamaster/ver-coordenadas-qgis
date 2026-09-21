@@ -21,3 +21,26 @@ python -m unittest discover -s tests -p "test_*.py" -v
 ```
 
 Los niveles B y C requieren un entorno con PyQGIS/Qt disponible.
+
+## Ejecución del Nivel B — PyQGIS
+
+Las pruebas de geometría y mediciones requieren una instalación real de QGIS con PyQGIS disponible.
+
+Desde un entorno de Python configurado por QGIS, situado en la raíz del repositorio:
+
+```bash
+python -m unittest tests.test_geometry tests.test_measurements -v
+```
+
+También puede ejecutarse toda la batería disponible con:
+
+```bash
+python -m unittest discover -s tests -p "test_*.py" -v
+```
+
+Los casos `CUR-01`, `CUR-02`, `CRS-07` y `CRS-08` están marcados temporalmente con `@unittest.expectedFailure`. Representan hallazgos conocidos de la auditoría 6.1 y fijan el comportamiento deseado para la fase 6.4:
+
+- rechazar geometrías curvas en la versión 1.0.0;
+- rechazar CRS inválidos o unidades desconocidas antes de presentar medidas como metros o metros cuadrados.
+
+El Nivel B no se considerará verificado hasta ejecutar esta batería dentro de un entorno real de QGIS/PyQGIS.
