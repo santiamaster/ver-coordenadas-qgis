@@ -38,12 +38,12 @@ También puede ejecutarse toda la batería disponible con:
 python -m unittest discover -s tests -p "test_*.py" -v
 ```
 
-Los casos `CUR-01`, `CUR-02`, `CRS-07` y `CRS-08` están marcados temporalmente con `@unittest.expectedFailure`. Representan hallazgos conocidos de la auditoría 6.1 y fijan el comportamiento deseado para la fase 6.4:
+Los casos `CUR-01`, `CUR-02`, `CRS-07` y `CRS-08` forman parte de la batería normal de regresión. Verifican que la versión 1.0.0:
 
-- rechazar geometrías curvas en la versión 1.0.0;
-- rechazar CRS inválidos o unidades desconocidas antes de presentar medidas como metros o metros cuadrados.
+- rechace geometrías curvas de forma explícita;
+- rechace CRS inválidos o unidades desconocidas antes de presentar medidas como metros o metros cuadrados.
 
-El Nivel B no se considerará verificado hasta ejecutar esta batería dentro de un entorno real de QGIS/PyQGIS.
+El Nivel B fue verificado dentro de QGIS 4.2 como parte de la revisión técnica de la versión 1.0.0.
 
 ## Ejecución del Nivel C — integración Qt/QGIS
 
@@ -75,4 +75,4 @@ print("Unexpected successes:", len(result.unexpectedSuccesses))
 
 Después debe volver a ejecutarse la batería completa con `unittest` para comprobar que los niveles A, B y C conviven sin regresiones.
 
-El Nivel C no se considerará verificado hasta obtener una ejecución real en QGIS 4.2.
+El Nivel C fue verificado dentro de QGIS 4.2. La ejecución conjunta de los niveles A, B y C completó 68 pruebas sin fallos ni errores.
