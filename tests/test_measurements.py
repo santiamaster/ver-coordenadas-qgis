@@ -106,7 +106,6 @@ class GeographicMeasurementTests(QgisTestCase):
 
 
 class InvalidCrsRegressionTests(QgisTestCase):
-    @unittest.expectedFailure
     def test_crs_07_invalid_crs_should_be_rejected_before_reporting_metric_units(self):
         crs = QgsCoordinateReferenceSystem()
         self.assertFalse(crs.isValid())
@@ -117,7 +116,6 @@ class InvalidCrsRegressionTests(QgisTestCase):
             calculator = GeometryMeasurementCalculator(crs, project)
             calculator.measure_length(line)
 
-    @unittest.expectedFailure
     def test_crs_08_unknown_projected_units_should_be_rejected(self):
         class UnknownUnitCrs:
             def isGeographic(self):
