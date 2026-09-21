@@ -127,7 +127,7 @@ La prueba manual final dentro de QGIS 4.2 sigue siendo obligatoria aunque todas 
 - [x] Pruebas Nivel A implementadas.
 - [x] Pruebas Nivel B implementadas.
 - [x] Pruebas Nivel C implementadas.
-- [ ] Pruebas manuales finales ejecutadas.
+- [x] Pruebas manuales finales ejecutadas.
 - [x] Hallazgos corregidos y regresiones verificadas.
 
 ## Verificación del Nivel B
@@ -181,3 +181,28 @@ Ejecutada manualmente dentro de QGIS 4.2 el 2026-09-21 después de corregir los 
 - Unexpected successes: 0.
 
 Los casos `CUR-01`, `CUR-02`, `CRS-07` y `CRS-08` pasan ahora como pruebas normales.
+
+## Verificación manual final — fase 6.5
+
+Ejecutada manualmente dentro de QGIS 4.2 el 2026-09-21 sobre el flujo de uso real del complemento.
+
+- `MAN-01` Polígono proyectado: OK.
+- `MAN-02` Línea proyectada: OK.
+- `MAN-03` Polígono con hueco: OK.
+- `MAN-04` Geometrías multipartes: OK.
+- `MAN-05` Polígono EPSG:4326: OK.
+- `MAN-06` Línea EPSG:4326: OK.
+- `MAN-07` Preferencias proyectadas/geográficas independientes: OK.
+- `MAN-08` Capa Point no soportada: OK.
+- `MAN-09` Rechazo explícito de geometrías curvas: OK.
+- `MAN-10` Rechazo de CRS inválido: OK.
+
+Observaciones verificadas durante la prueba manual:
+
+- La numeración de vértices se mantiene continua entre partes y huecos.
+- Las áreas netas y áreas de huecos se presentan por separado, con total multipartes coherente.
+- Los formatos geográficos DMS muestran hemisferios `S/W` sin signo negativo.
+- Las longitudes de líneas se presentan en metros o kilómetros según corresponda.
+- Las preferencias de formato se recuerdan de forma independiente para CRS proyectados y geográficos.
+- Las geometrías curvas muestran el mensaje: `Las geometrías curvas no están soportadas en Ver Coordenadas 1.0.0.`
+- Un CRS inválido muestra el mensaje: `El CRS de la capa no es válido; no se pueden calcular medidas confiables.`
