@@ -75,4 +75,4 @@ print("Unexpected successes:", len(result.unexpectedSuccesses))
 
 Después debe volver a ejecutarse la batería completa con `unittest` para comprobar que los niveles A, B y C conviven sin regresiones.
 
-El Nivel C fue verificado dentro de QGIS 4.2. La ejecución conjunta de los niveles A, B y C completó 68 pruebas sin fallos ni errores.
+El Nivel C fue verificado dentro de QGIS 4.2. La ejecución conjunta de los niveles A, B y C completó 68 pruebas sin fallos ni errores durante la fase 6.4. La revisión final de calidad añadió una prueba adicional para verificar que la acción contextual utiliza el icono del plugin.
