@@ -12,6 +12,8 @@
 
 from __future__ import annotations
 
+from pathlib import Path
+
 from qgis.core import Qgis, QgsFeature, QgsMapLayer, QgsProject
 from qgis.gui import QgsGui, QgsMapLayerAction, QgsMapLayerActionContext
 from qgis.PyQt.QtGui import QIcon
@@ -31,7 +33,7 @@ class SupportedGeometryAction(QgsMapLayerAction):
             parent,
             Qgis.LayerType.Vector,
             Qgis.MapLayerActionTarget.SingleFeature,
-            QIcon(),
+            QIcon(str(Path(__file__).with_name("icon.png"))),
             Qgis.MapLayerActionFlag.EnableOnlyWhenHasGeometry,
         )
 

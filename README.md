@@ -24,6 +24,12 @@ La versión **1.0.0** está pensada para un flujo de trabajo simple: identificar
 - **QGIS 4.2 o superior**.
 - Capas vectoriales lineales y poligonales.
 
+## Limitaciones conocidas de la versión 1.0.0
+
+- Las geometrías con segmentos curvos no se segmentizan automáticamente: el complemento las rechaza con un mensaje claro.
+- Si el CRS de la capa es inválido o sus unidades proyectadas son desconocidas, el complemento no presenta medidas como metros o metros cuadrados.
+- Las coordenadas Z/M no forman parte de la salida; la versión 1.0.0 trabaja con componentes XY.
+
 ## Instalación
 
 ### Instalación actual desde ZIP

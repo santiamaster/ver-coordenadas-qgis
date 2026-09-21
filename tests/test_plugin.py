@@ -65,6 +65,9 @@ class SupportedGeometryActionTests(QgisGuiTestCase):
     def test_action_is_not_available_without_layer(self):
         self.assertFalse(self.action.canRunUsingLayer(None))
 
+    def test_action_uses_plugin_icon(self):
+        self.assertFalse(self.action.icon().isNull())
+
 
 class PluginLifecycleTests(QgisGuiTestCase):
     def setUp(self):

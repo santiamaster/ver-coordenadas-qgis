@@ -87,20 +87,15 @@ Esta matriz define los casos que deben verificarse antes de publicar la versión
 | META-02 | Icono | `icon.png` | Existe en el directorio del plugin | Estática | P0 |
 | META-03 | Licencia | Paquete final | `LICENSE` dentro del plugin | Empaquetado | P0 |
 
-## Decisiones pendientes
+## Decisiones adoptadas
 
 ### CRS inválido o unidades desconocidas
 
-El complemento no debe presentar una medida como metros o metros cuadrados si no puede demostrar que la conversión es válida. La batería de pruebas deberá fijar este comportamiento antes de modificar el código.
+El complemento rechaza CRS inválidos y CRS proyectados con unidades desconocidas antes de calcular o presentar medidas en metros o metros cuadrados. Este comportamiento quedó cubierto por `CRS-07` y `CRS-08`.
 
 ### Geometrías curvas
 
-La versión 1.0.0 declara soporte para Polygon, MultiPolygon, LineString y MultiLineString. Las geometrías curvas deberán probarse expresamente para decidir entre:
-
-1. rechazarlas con un mensaje claro en 1.0.0; o
-2. documentar y aceptar la segmentización realizada por QGIS.
-
-La opción preferida para 1.0.0 es rechazarlas de forma explícita y considerar soporte de curvas como una mejora futura.
+La versión 1.0.0 admite Polygon, MultiPolygon, LineString y MultiLineString. Las geometrías con segmentos curvos se rechazan de forma explícita antes de que QGIS pueda segmentizarlas implícitamente. El soporte de curvas queda reservado como una posible mejora futura. Este comportamiento quedó cubierto por `CUR-01` y `CUR-02`.
 
 ## Capas de automatización
 
@@ -127,7 +122,7 @@ La prueba manual final dentro de QGIS 4.2 sigue siendo obligatoria aunque todas 
 - [x] Pruebas Nivel A implementadas.
 - [x] Pruebas Nivel B implementadas.
 - [x] Pruebas Nivel C implementadas.
-- [ ] Pruebas manuales finales ejecutadas.
+- [x] Pruebas manuales finales ejecutadas.
 - [x] Hallazgos corregidos y regresiones verificadas.
 
 ## Verificación del Nivel B
@@ -181,3 +176,28 @@ Ejecutada manualmente dentro de QGIS 4.2 el 2026-09-21 después de corregir los 
 - Unexpected successes: 0.
 
 Los casos `CUR-01`, `CUR-02`, `CRS-07` y `CRS-08` pasan ahora como pruebas normales.
+
+## Verificación manual final — fase 6.5
+
+Ejecutada manualmente dentro de QGIS 4.2 el 2026-09-21 sobre el flujo de uso real del complemento.
+
+- `MAN-01` Polígono proyectado: OK.
+- `MAN-02` Línea proyectada: OK.
+- `MAN-03` Polígono con hueco: OK.
+- `MAN-04` Geometrías multipartes: OK.
+- `MAN-05` Polígono EPSG:4326: OK.
+- `MAN-06` Línea EPSG:4326: OK.
+- `MAN-07` Preferencias proyectadas/geográficas independientes: OK.
+- `MAN-08` Capa Point no soportada: OK.
+- `MAN-09` Rechazo explícito de geometrías curvas: OK.
+- `MAN-10` Rechazo de CRS inválido: OK.
+
+Observaciones verificadas durante la prueba manual:
+
+- La numeración de vértices se mantiene continua entre partes y huecos.
+- Las áreas netas y áreas de huecos se presentan por separado, con total multipartes coherente.
+- Los formatos geográficos DMS muestran hemisferios `S/W` sin signo negativo.
+- Las longitudes de líneas se presentan en metros o kilómetros según corresponda.
+- Las preferencias de formato se recuerdan de forma independiente para CRS proyectados y geográficos.
+- Las geometrías curvas muestran el mensaje: `Las geometrías curvas no están soportadas en Ver Coordenadas 1.0.0.`
+- Un CRS inválido muestra el mensaje: `El CRS de la capa no es válido; no se pueden calcular medidas confiables.`
