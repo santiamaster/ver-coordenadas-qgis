@@ -87,20 +87,15 @@ Esta matriz define los casos que deben verificarse antes de publicar la versión
 | META-02 | Icono | `icon.png` | Existe en el directorio del plugin | Estática | P0 |
 | META-03 | Licencia | Paquete final | `LICENSE` dentro del plugin | Empaquetado | P0 |
 
-## Decisiones pendientes
+## Decisiones adoptadas
 
 ### CRS inválido o unidades desconocidas
 
-El complemento no debe presentar una medida como metros o metros cuadrados si no puede demostrar que la conversión es válida. La batería de pruebas deberá fijar este comportamiento antes de modificar el código.
+El complemento rechaza CRS inválidos y CRS proyectados con unidades desconocidas antes de calcular o presentar medidas en metros o metros cuadrados. Este comportamiento quedó cubierto por `CRS-07` y `CRS-08`.
 
 ### Geometrías curvas
 
-La versión 1.0.0 declara soporte para Polygon, MultiPolygon, LineString y MultiLineString. Las geometrías curvas deberán probarse expresamente para decidir entre:
-
-1. rechazarlas con un mensaje claro en 1.0.0; o
-2. documentar y aceptar la segmentización realizada por QGIS.
-
-La opción preferida para 1.0.0 es rechazarlas de forma explícita y considerar soporte de curvas como una mejora futura.
+La versión 1.0.0 admite Polygon, MultiPolygon, LineString y MultiLineString. Las geometrías con segmentos curvos se rechazan de forma explícita antes de que QGIS pueda segmentizarlas implícitamente. El soporte de curvas queda reservado como una posible mejora futura. Este comportamiento quedó cubierto por `CUR-01` y `CUR-02`.
 
 ## Capas de automatización
 
