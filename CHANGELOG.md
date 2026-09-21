@@ -16,3 +16,5 @@ Candidata a primera versión pública.
 - Utiliza mediciones elipsoidales para CRS geográficos mediante `QgsDistanceArea`.
 - Muestra advertencias adaptativas para mediciones de superficie y longitud sobre CRS geográficos.
 - Copia automáticamente las coordenadas y las medidas al portapapeles.
+- Rechaza explícitamente las geometrías curvas no soportadas para evitar segmentización implícita.
+- Valida el CRS y las unidades antes de presentar medidas métricas, rechazando CRS inválidos o unidades desconocidas.
