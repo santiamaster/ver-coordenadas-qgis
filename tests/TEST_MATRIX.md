@@ -124,6 +124,7 @@ La prueba manual final dentro de QGIS 4.2 sigue siendo obligatoria aunque todas 
 - [x] Pruebas Nivel C implementadas.
 - [x] Pruebas manuales finales ejecutadas.
 - [x] Hallazgos corregidos y regresiones verificadas.
+- [x] Revisión final de calidad completada.
 
 ## Verificación del Nivel B
 
@@ -201,3 +202,18 @@ Observaciones verificadas durante la prueba manual:
 - Las preferencias de formato se recuerdan de forma independiente para CRS proyectados y geográficos.
 - Las geometrías curvas muestran el mensaje: `Las geometrías curvas no están soportadas en Ver Coordenadas 1.0.0.`
 - Un CRS inválido muestra el mensaje: `El CRS de la capa no es válido; no se pueden calcular medidas confiables.`
+
+## Verificación final — fase 6.6
+
+Ejecutada manualmente dentro de QGIS 4.2 el 2026-09-21 sobre la versión final instalada del complemento.
+
+- Total de pruebas: 69.
+- Fallos: 0.
+- Errores: 0.
+- Expected failures: 0.
+- Unexpected successes: 0.
+- La acción contextual carga correctamente el icono del plugin.
+- El icono final fue optimizado a 256 × 256 px (~28,4 KiB).
+- `LICENSE` está incluido dentro de `ver_coordenadas/` para el empaquetado final.
+
+La primera ejecución de esta fase arrojó un único fallo en la prueba del icono porque QGIS tenía cargada una versión anterior del plugin. Tras desinstalar esa copia, instalar la versión actual y repetir la batería completa, las 69 pruebas finalizaron correctamente.
