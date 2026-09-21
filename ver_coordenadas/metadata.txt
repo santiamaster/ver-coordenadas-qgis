@@ -1,11 +1,11 @@
 [general]
 name=Ver Coordenadas
-description=Consulta y copia coordenadas de vértices, áreas de polígonos y longitudes de líneas directamente desde entidades vectoriales.
+description=View and copy vertex coordinates, polygon areas, and line lengths directly from vector features.
 version=1.0.0
 qgisMinimumVersion=4.2
 author=Secretaría de Minería de Salta - Carlos Daniel Santiápichi Mastrolinardo
 email=mineriayenergia@produccionsalta.gob.ar
-about=Complemento para consultar y copiar coordenadas y medidas de entidades Polygon, MultiPolygon, LineString y MultiLineString. En CRS proyectados permite mostrar coordenadas en orden Gauss-Krüger (norte, este) o tradicional (este, norte). En CRS geográficos ofrece formatos DMS, DMM y grados decimales, con mediciones elipsoidales mediante QgsDistanceArea y avisos específicos. También informa áreas netas, áreas de huecos y totales en geometrías multipartes.
+about=Plugin for viewing and copying coordinates and measurements from Polygon, MultiPolygon, LineString and MultiLineString features. Projected CRS coordinates can be displayed in Gauss-Krüger order (northing, easting) or traditional order (easting, northing). Geographic CRS coordinates are available in DMS, DMM and decimal degrees, with ellipsoidal measurements through QgsDistanceArea and contextual warnings. Net polygon areas, hole areas and multipart totals are also reported. Curved geometries, invalid CRS definitions and projected CRS with unknown units are rejected explicitly.
 category=Vector
 tags=coordinates,vertices,polygon,line,geometry,gauss-kruger,dms,dmm,dd
 homepage=https://github.com/santiamaster/ver-coordenadas-qgis
