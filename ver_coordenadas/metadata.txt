@@ -19,5 +19,7 @@ changelog=1.0.0 - Primera versión pública.
     Incorpora mediciones elipsoidales para CRS geográficos y avisos adaptativos.
     Informa áreas netas, áreas de huecos, longitudes y totales de geometrías multipartes.
     Copia automáticamente coordenadas y medidas al portapapeles.
+    Rechaza geometrías curvas no soportadas de forma explícita.
+    Valida CRS inválidos y unidades proyectadas desconocidas antes de calcular medidas métricas.
 experimental=False
 deprecated=False
