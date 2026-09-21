@@ -126,7 +126,7 @@ La prueba manual final dentro de QGIS 4.2 sigue siendo obligatoria aunque todas 
 - [x] Matriz definida.
 - [x] Pruebas Nivel A implementadas.
 - [x] Pruebas Nivel B implementadas.
-- [ ] Pruebas Nivel C implementadas.
+- [x] Pruebas Nivel C implementadas.
 - [ ] Pruebas manuales finales ejecutadas.
 - [ ] Hallazgos corregidos y regresiones verificadas.
 
@@ -147,3 +147,25 @@ Los cuatro `expected failure` corresponden a los hallazgos conocidos que se corr
 - `CUR-02`: CurvePolygon debe rechazarse en 1.0.0.
 - `CRS-07`: CRS inválido debe rechazarse antes de informar unidades métricas.
 - `CRS-08`: unidades proyectadas desconocidas deben rechazarse antes de informar unidades métricas.
+
+## Verificación del Nivel C
+
+Ejecutada manualmente dentro de QGIS 4.2 el 2026-09-21.
+
+- Pruebas del Nivel C: 17 ejecutadas.
+- Fallos: 0.
+- Errores: 0.
+- Expected failures: 0.
+- Unexpected successes: 0.
+
+## Verificación conjunta A + B + C
+
+Ejecutada manualmente dentro de QGIS 4.2 el 2026-09-21.
+
+- Total de pruebas: 68.
+- Fallos: 0.
+- Errores: 0.
+- Expected failures: 4.
+- Unexpected successes: 0.
+
+Los cuatro `expected failure` siguen correspondiendo únicamente a `CUR-01`, `CUR-02`, `CRS-07` y `CRS-08`, ya identificados para corrección en la fase 6.4.
