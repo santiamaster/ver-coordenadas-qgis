@@ -219,6 +219,14 @@ La documentación para desarrolladores se mantiene separada de esta guía de uso
 Desarrollado y mantenido por: **Carlos Daniel Santiápichi Mastrolinardo**  
 Contacto: **mineriayenergia@produccionsalta.gob.ar**
 
+### Asistencia de inteligencia artificial
+
+Durante el desarrollo del complemento se utilizó **ChatGPT de OpenAI** como herramienta de apoyo para tareas de análisis, diseño, revisión de código, documentación y planificación de pruebas.
+
+Las decisiones de diseño, la validación funcional, las pruebas en QGIS y la responsabilidad final sobre el código y su publicación corresponden al desarrollador y a la Secretaría de Minería de Salta.
+
+La asistencia de IA se realizó mediante ChatGPT durante el ciclo de desarrollo de la versión 1.0.0.
+
 ## Licencia
 
 Este proyecto se distribuye bajo la **GNU General Public License v2.0 o posterior (GPL-2.0-or-later)**.
