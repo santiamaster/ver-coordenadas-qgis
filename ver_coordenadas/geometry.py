@@ -228,6 +228,12 @@ def extract_coordinate_groups(
     if geometry is None or geometry.isNull() or geometry.isEmpty():
         raise ValueError("La entidad no tiene una geometría utilizable.")
 
+    abstract_geometry = geometry.constGet()
+    if abstract_geometry is not None and abstract_geometry.hasCurvedSegments():
+        raise ValueError(
+            "Las geometrías curvas no están soportadas en Ver Coordenadas 1.0.0."
+        )
+
     geometry_type = geometry.type()
 
     if geometry_type == Qgis.GeometryType.Polygon:
