@@ -29,10 +29,24 @@ class GeometryMeasurementCalculator:
     """
 
     def __init__(self, source_crs, project) -> None:
+        if not source_crs.isValid():
+            raise ValueError(
+                "El CRS de la capa no es válido; no se pueden calcular medidas confiables."
+            )
+
         self._source_crs = source_crs
         self._project = project
         self._is_geographic = bool(source_crs.isGeographic())
         self._distance_area = None
+
+        if (
+            not self._is_geographic
+            and source_crs.mapUnits() == Qgis.DistanceUnit.Unknown
+        ):
+            raise ValueError(
+                "La unidad del CRS proyectado es desconocida; "
+                "no se pueden convertir las medidas a metros."
+            )
 
         if self._is_geographic:
             self._distance_area = QgsDistanceArea()
