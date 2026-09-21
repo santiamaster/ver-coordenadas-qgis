@@ -11,3 +11,13 @@ La implementación de las pruebas se organiza en tres niveles:
 - **Nivel C**: integración Qt/QGIS para `dialog.py` y `plugin.py`.
 
 Además de la automatización, la versión 1.0.0 deberá superar una verificación manual final dentro de QGIS 4.2.
+
+## Ejecución del Nivel A
+
+Las pruebas del Nivel A usan `unittest` de la biblioteca estándar y stubs mínimos de `qgis.core`, por lo que pueden ejecutarse fuera de una instalación de QGIS:
+
+```bash
+python -m unittest discover -s tests -p "test_*.py" -v
+```
+
+Los niveles B y C requieren un entorno con PyQGIS/Qt disponible.
