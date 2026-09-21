@@ -223,7 +223,6 @@ class DimensionalGeometryTests(QgisTestCase):
 
 
 class CurvedGeometryRegressionTests(QgisTestCase):
-    @unittest.expectedFailure
     def test_cur_01_circularstring_should_be_rejected_for_version_1_0_0(self):
         geometry = QgsGeometry.fromWkt("CIRCULARSTRING (0 0, 1 1, 2 0)")
         self.assertFalse(geometry.isNull())
@@ -231,7 +230,6 @@ class CurvedGeometryRegressionTests(QgisTestCase):
         with self.assertRaisesRegex(ValueError, "curv"):
             extract_coordinate_groups(geometry)
 
-    @unittest.expectedFailure
     def test_cur_02_curvepolygon_should_be_rejected_for_version_1_0_0(self):
         geometry = QgsGeometry.fromWkt(
             "CURVEPOLYGON (CIRCULARSTRING (0 0, 2 2, 4 0, 2 -2, 0 0))"
