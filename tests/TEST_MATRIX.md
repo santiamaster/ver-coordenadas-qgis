@@ -128,7 +128,7 @@ La prueba manual final dentro de QGIS 4.2 sigue siendo obligatoria aunque todas 
 - [x] Pruebas Nivel B implementadas.
 - [x] Pruebas Nivel C implementadas.
 - [ ] Pruebas manuales finales ejecutadas.
-- [ ] Hallazgos corregidos y regresiones verificadas.
+- [x] Hallazgos corregidos y regresiones verificadas.
 
 ## Verificación del Nivel B
 
@@ -169,3 +169,15 @@ Ejecutada manualmente dentro de QGIS 4.2 el 2026-09-21.
 - Unexpected successes: 0.
 
 Los cuatro `expected failure` siguen correspondiendo únicamente a `CUR-01`, `CUR-02`, `CRS-07` y `CRS-08`, ya identificados para corrección en la fase 6.4.
+
+## Verificación de la fase 6.4
+
+Ejecutada manualmente dentro de QGIS 4.2 el 2026-09-21 después de corregir los hallazgos de geometrías curvas y validación de CRS.
+
+- Total de pruebas: 68.
+- Fallos: 0.
+- Errores: 0.
+- Expected failures: 0.
+- Unexpected successes: 0.
+
+Los casos `CUR-01`, `CUR-02`, `CRS-07` y `CRS-08` pasan ahora como pruebas normales.
