@@ -78,7 +78,7 @@ Comprobaciones realizadas:
 
 ### 7.4 Construcción del ZIP candidato de publicación
 
-Estado: **en corrección tras la primera inspección del artefacto**.
+Estado: **completado**.
 
 Se agregó `scripts/build_release.ps1` para construir de forma reproducible el ZIP candidato desde la copia local actualizada del repositorio.
 
@@ -102,6 +102,37 @@ El script mantiene además estas garantías:
 
 Nombre previsto del candidato: `dist/ver_coordenadas-1.0.0.zip`.
 
+La segunda ejecución local, realizada con el script corregido, generó el candidato definitivo para inspección:
+
+- Archivo: `ver_coordenadas-1.0.0.zip`
+- Tamaño: 49.083 bytes.
+- SHA-256: `CA183AFFE65BC2771E688C57FC2793B88B9D70B6F973681D941BDAAB26F569B8`
+- Las rutas internas utilizan exclusivamente `/`.
+
+### 7.5 Inspección del ZIP
+
+Estado: **completado**.
+
+Se inspeccionó directamente el artefacto generado en 7.4.
+
+Resultados:
+
+- Integridad ZIP: OK.
+- El SHA-256 y el tamaño coinciden con los informados por el script de construcción.
+- Contiene exactamente los diez archivos aprobados, sin entradas adicionales.
+- Todas las entradas están bajo una única carpeta raíz `ver_coordenadas/`.
+- No existen rutas absolutas, secuencias `../` ni barras invertidas.
+- Los siete módulos Python incluidos compilan sintácticamente sin errores.
+- `metadata.txt` se puede interpretar correctamente y declara:
+  - `version=1.0.0`
+  - `qgisMinimumVersion=4.2`
+  - `qgisMaximumVersion=4.99`
+  - `category=Vector`
+  - `experimental=False`
+  - `deprecated=False`
+- `icon.png` es un PNG válido de 256 × 256 px.
+- `LICENSE` contiene la GNU General Public License Version 2.
+
 ### Próximo subpaso
 
-Sincronizar el repositorio local, volver a ejecutar el script corregido y utilizar el nuevo ZIP resultante para completar **7.5 — Inspección del ZIP**.
+**7.6 — Instalación limpia desde el ZIP candidato en QGIS 4.2 y prueba de humo del paquete instalado.**
