@@ -159,6 +159,39 @@ Pruebas de humo realizadas sobre el paquete instalado:
 
 Resultado: **10/10 pruebas de humo superadas**.
 
-### Próximo subpaso
+### 7.7 Revisión final previa a subir
 
-**7.7 — Revisión final previa a subir al repositorio oficial de plugins de QGIS.**
+Estado: **completado**.
+
+Se realizó la revisión final del estado del repositorio, la documentación, los metadatos, las pruebas y el ZIP candidato antes de iniciar el proceso de publicación en el repositorio oficial de plugins de QGIS.
+
+Checklist final:
+
+- Nombre de carpeta del plugin: `ver_coordenadas`, válido para el repositorio oficial.
+- `metadata.txt`, `__init__.py` y `LICENSE` presentes en la raíz de la carpeta del plugin.
+- `version=1.0.0`.
+- Compatibilidad declarada: QGIS 4.2 a 4.99.
+- Descripción corta en inglés y campo `about` con descripción detallada de la funcionalidad.
+- Repositorio, página principal y tracker configurados hacia el repositorio público de GitHub.
+- Licencia: GPL-2.0-or-later.
+- Sin dependencias Python externas.
+- Sin binarios ejecutables ni bibliotecas compiladas.
+- Tamaño del ZIP candidato: 49.083 bytes, ampliamente por debajo del límite del repositorio oficial.
+- Auditoría estática de seguridad completada sin hallazgos críticos conocidos.
+- Suite automatizada final: 69 pruebas, 0 fallos, 0 errores, 0 expected failures y 0 unexpected successes.
+- Verificación manual QGIS 4.2 completada.
+- Instalación limpia desde el ZIP candidato completada.
+- Pruebas de humo del ZIP instalado: 10/10 OK.
+- Icono final incluido y verificado.
+- Declaración de asistencia de inteligencia artificial documentada en el README y revisada institucionalmente.
+- El ZIP candidato que debe conservarse sin modificaciones para el siguiente paso es:
+  - `ver_coordenadas-1.0.0.zip`
+  - SHA-256: `CA183AFFE65BC2771E688C57FC2793B88B9D70B6F973681D941BDAAB26F569B8`
+
+Observación: el repositorio oficial ejecutará sus propios controles automáticos al subir el ZIP. La aprobación final depende de superar esa validación y, para usuarios sin permisos de aprobación, de la revisión del equipo de QGIS.
+
+## Resultado del Paso 7
+
+**Paso 7 — Pruebas de publicación y seguridad: COMPLETADO.**
+
+El complemento y su ZIP candidato quedan listos para avanzar al **Paso 8 — OSGEO ID y preparación de la subida al repositorio oficial de QGIS**.
