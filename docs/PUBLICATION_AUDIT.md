@@ -76,6 +76,24 @@ Comprobaciones realizadas:
 - `version=1.0.0` y el changelog corresponden a la primera versión pública.
 - `LICENSE` está incluido como archivo independiente dentro de la carpeta del plugin.
 
+### 7.4 Construcción del ZIP candidato de publicación
+
+Estado: **preparado; pendiente de ejecución local y verificación del artefacto**.
+
+Se agregó `scripts/build_release.ps1` para construir de forma reproducible el ZIP candidato desde la copia local actualizada del repositorio.
+
+El script:
+
+- toma únicamente los diez archivos aprobados de `ver_coordenadas/`;
+- construye una única carpeta raíz `ver_coordenadas/` dentro del ZIP;
+- excluye automáticamente archivos de desarrollo, cachés y cualquier contenido no incluido en el manifiesto;
+- valida que no falten archivos obligatorios;
+- falla si detecta entradas inesperadas;
+- muestra el contenido final del ZIP;
+- informa tamaño y SHA-256 del artefacto.
+
+Nombre previsto del candidato: `dist/ver_coordenadas-1.0.0.zip`.
+
 ### Próximo subpaso
 
-**7.4 — Construcción del ZIP candidato de publicación.**
+Ejecutar el script sobre una copia local sincronizada, conservar su salida y utilizar el ZIP resultante para **7.5 — Inspección del ZIP**.
