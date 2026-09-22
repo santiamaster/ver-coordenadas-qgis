@@ -58,6 +58,24 @@ Resultados:
 
 El repositorio oficial de QGIS ejecuta automáticamente controles con Bandit, detect-secrets, Flake8 y análisis de archivos al subir cada versión. La auditoría local de este paso busca anticipar esos controles, pero el resultado definitivo será el escaneo realizado por el repositorio oficial al cargar el ZIP.
 
+### 7.3 Validación formal de `metadata.txt`
+
+Estado: **completado**.
+
+Comprobaciones realizadas:
+
+- `name`, `description`, `version`, `qgisMinimumVersion`, `author`, `email` y `about` están presentes.
+- La descripción corta y el campo `about` están redactados en inglés para la publicación pública.
+- `repository`, `homepage` y `tracker` apuntan al repositorio público y a su sistema de Issues.
+- `category=Vector` es coherente con la función del complemento.
+- `tags` utiliza términos en inglés.
+- `icon=icon.png` apunta a un recurso presente dentro del paquete.
+- `experimental=False` y `deprecated=False`.
+- `qgisMinimumVersion=4.2`.
+- Se declaró explícitamente `qgisMaximumVersion=4.99` para identificar la versión como compatible con la línea QGIS 4.x en el repositorio oficial.
+- `version=1.0.0` y el changelog corresponden a la primera versión pública.
+- `LICENSE` está incluido como archivo independiente dentro de la carpeta del plugin.
+
 ### Próximo subpaso
 
-**7.3 — Validación formal de `metadata.txt` y compatibilidad declarada con QGIS 4.**
+**7.4 — Construcción del ZIP candidato de publicación.**
