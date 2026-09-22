@@ -133,6 +133,32 @@ Resultados:
 - `icon.png` es un PNG válido de 256 × 256 px.
 - `LICENSE` contiene la GNU General Public License Version 2.
 
+### 7.6 Instalación limpia desde el ZIP candidato en QGIS 4.2
+
+Estado: **completado**.
+
+Se realizó una instalación limpia en QGIS 4.2 utilizando exactamente el ZIP candidato generado e inspeccionado en las fases 7.4 y 7.5:
+
+- Archivo: `ver_coordenadas-1.0.0.zip`
+- SHA-256: `CA183AFFE65BC2771E688C57FC2793B88B9D70B6F973681D941BDAAB26F569B8`
+
+La versión anterior del complemento fue retirada antes de instalar el candidato desde ZIP.
+
+Pruebas de humo realizadas sobre el paquete instalado:
+
+- `SMOKE-01` Carga del plugin: OK.
+- `SMOKE-02` Icono de la acción: OK.
+- `SMOKE-03` Polygon proyectado: OK.
+- `SMOKE-04` LineString proyectado: OK.
+- `SMOKE-05` CRS geográfico y aviso correspondiente: OK.
+- `SMOKE-06` Cambio entre formatos de coordenadas: OK.
+- `SMOKE-07` Copia automática al portapapeles: OK.
+- `SMOKE-08` Persistencia del último formato seleccionado: OK.
+- `SMOKE-09` Capa Point no soportada: OK.
+- `SMOKE-10` Ciclo desactivar/activar sin acciones duplicadas: OK.
+
+Resultado: **10/10 pruebas de humo superadas**.
+
 ### Próximo subpaso
 
-**7.6 — Instalación limpia desde el ZIP candidato en QGIS 4.2 y prueba de humo del paquete instalado.**
+**7.7 — Revisión final previa a subir al repositorio oficial de plugins de QGIS.**
