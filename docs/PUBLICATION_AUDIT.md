@@ -78,11 +78,19 @@ Comprobaciones realizadas:
 
 ### 7.4 Construcción del ZIP candidato de publicación
 
-Estado: **preparado; pendiente de ejecución local y verificación del artefacto**.
+Estado: **en corrección tras la primera inspección del artefacto**.
 
 Se agregó `scripts/build_release.ps1` para construir de forma reproducible el ZIP candidato desde la copia local actualizada del repositorio.
 
-El script:
+La primera ejecución local generó un archivo de 49.083 bytes con SHA-256:
+
+`98854926C41B5BD4299FF39D761FAC8FD71397AD8AF94E52A3C57E66D231CC70`
+
+La inspección inmediata del ZIP detectó que `Compress-Archive` había almacenado las rutas internas con barra invertida (`ver_coordenadas\\archivo`) por haberse construido en Windows. Aunque el contenido era correcto, ese formato de ruta no es suficientemente portable para un paquete destinado a Windows, Linux y macOS.
+
+Se corrigió `scripts/build_release.ps1` para construir el ZIP mediante `System.IO.Compression.ZipArchive`, crear explícitamente las entradas con rutas `ver_coordenadas/archivo` y fallar si aparece cualquier barra invertida dentro del archivo ZIP.
+
+El script mantiene además estas garantías:
 
 - toma únicamente los diez archivos aprobados de `ver_coordenadas/`;
 - construye una única carpeta raíz `ver_coordenadas/` dentro del ZIP;
@@ -96,4 +104,4 @@ Nombre previsto del candidato: `dist/ver_coordenadas-1.0.0.zip`.
 
 ### Próximo subpaso
 
-Ejecutar el script sobre una copia local sincronizada, conservar su salida y utilizar el ZIP resultante para **7.5 — Inspección del ZIP**.
+Sincronizar el repositorio local, volver a ejecutar el script corregido y utilizar el nuevo ZIP resultante para completar **7.5 — Inspección del ZIP**.
