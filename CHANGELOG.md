@@ -18,3 +18,4 @@ Candidata a primera versión pública.
 - Copia automáticamente las coordenadas y las medidas al portapapeles.
 - Rechaza explícitamente las geometrías curvas no soportadas para evitar segmentización implícita.
 - Valida el CRS y las unidades antes de presentar medidas métricas, rechazando CRS inválidos o unidades desconocidas.
+- Ajusta la redacción de la declaración de asistencia de inteligencia artificial en el README conforme a la revisión del equipo legal de la Secretaría de Minería de Salta.
