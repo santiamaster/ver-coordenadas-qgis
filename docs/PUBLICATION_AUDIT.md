@@ -1,0 +1,63 @@
+# Auditoría de publicación — Ver Coordenadas 1.0.0
+
+Este documento registra las verificaciones previas a la publicación del complemento en el repositorio oficial de plugins de QGIS.
+
+## Paso 7 — Pruebas de publicación y seguridad
+
+### 7.1 Auditoría del contenido del paquete
+
+Estado: **completado**.
+
+El paquete candidato debe contener únicamente la carpeta raíz `ver_coordenadas/` con los siguientes archivos:
+
+```text
+ver_coordenadas/
+├── __init__.py
+├── plugin.py
+├── geometry.py
+├── measurements.py
+├── formatter.py
+├── dialog.py
+├── warning.py
+├── metadata.txt
+├── LICENSE
+└── icon.png
+```
+
+Comprobaciones realizadas:
+
+- `metadata.txt` está dentro de la carpeta del plugin.
+- `__init__.py` está dentro de la carpeta del plugin.
+- `LICENSE` está dentro de la carpeta del plugin.
+- `icon.png` está dentro de la carpeta del plugin.
+- No se detectaron `__pycache__`, `*.pyc`, `*.pyo`, `.DS_Store`, `Thumbs.db`, `Desktop.ini`, ZIP anidados, ejecutables, DLL, bibliotecas compartidas ni proyectos temporales de QGIS.
+- `.gitignore` excluye cachés de Python, entornos virtuales, archivos de IDE/SO y artefactos de build/release.
+- El ZIP final no debe incluir `tests/`, `screenshots/`, `.github/`, documentación de desarrollo ni archivos del repositorio externos a `ver_coordenadas/`.
+
+### 7.2 Auditoría de seguridad orientada al validador de QGIS
+
+Estado: **completado a nivel estático del código fuente**.
+
+Se revisaron los módulos Python incluidos en `ver_coordenadas/` buscando patrones asociados a los controles automáticos del repositorio oficial de QGIS.
+
+Resultados:
+
+- No se utiliza `subprocess`, `os.system` ni ejecución de shell.
+- No se utiliza `eval()`, el built-in `exec()`, `pickle` ni `marshal`.
+- No se utilizan `requests`, `urllib`, sockets ni otros accesos de red.
+- El plugin no realiza descargas ni llamadas a servicios externos.
+- No se detectaron contraseñas, tokens, claves API ni cabeceras de autorización embebidas.
+- No se detectaron escrituras, borrados o cambios de permisos arbitrarios sobre archivos.
+- `QSettings` se usa únicamente para recordar la preferencia de formato del usuario.
+- `Path(__file__).with_name("icon.png")` se usa únicamente para localizar el icono distribuido con el plugin.
+- La llamada `coordinates_dialog.exec()` corresponde al método modal de `QDialog`; no es uso del built-in Python `exec()`.
+- No existen dependencias Python externas: el código utiliza PyQGIS, `qgis.PyQt` y biblioteca estándar.
+- El único recurso no textual del paquete es `icon.png`, que es un recurso gráfico y no un binario ejecutable.
+
+### Herramientas del escaneo oficial
+
+El repositorio oficial de QGIS ejecuta automáticamente controles con Bandit, detect-secrets, Flake8 y análisis de archivos al subir cada versión. La auditoría local de este paso busca anticipar esos controles, pero el resultado definitivo será el escaneo realizado por el repositorio oficial al cargar el ZIP.
+
+### Próximo subpaso
+
+**7.3 — Validación formal de `metadata.txt` y compatibilidad declarada con QGIS 4.**
