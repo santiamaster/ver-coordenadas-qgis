@@ -257,3 +257,30 @@ Estado actualizado:
 - 7.5: completado nuevamente.
 - 7.6: pendiente de instalación limpia del nuevo ZIP.
 - 7.7: pendiente de revisión final del nuevo candidato.
+
+
+### Repetición de 7.6 tras cambio de autoría
+
+Estado: **completado**.
+
+Se realizó una nueva instalación limpia en QGIS 4.2 usando el candidato reconstruido tras el cambio de autoría:
+
+- Archivo: `ver_coordenadas-1.0.0.zip`
+- SHA-256: `C8F3CA2D886FA5F3108AAFA6ED584843B127E254D73FBC224AE37D7C6ADE7C34`
+
+Pruebas de humo reducidas realizadas:
+
+- `SMOKE-R1` Carga del plugin: OK.
+- `SMOKE-R2` Acción e icono: OK.
+- `SMOKE-R3` Polygon proyectado: OK.
+- `SMOKE-R4` CRS geográfico y aviso correspondiente: OK.
+- `SMOKE-R5` Desactivar/activar sin duplicar la acción: OK.
+
+Resultado: **5/5 pruebas superadas**.
+
+Estado actualizado:
+
+- 7.4: completado nuevamente.
+- 7.5: completado nuevamente.
+- 7.6: completado nuevamente.
+- 7.7: pendiente de revisión final del nuevo candidato.
