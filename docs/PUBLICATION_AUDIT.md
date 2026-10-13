@@ -327,3 +327,45 @@ El candidato anterior con SHA-256 `CA183AFFE65BC2771E688C57FC2793B88B9D70B6F9736
 **Paso 7 — COMPLETADO nuevamente.**
 
 El candidato con SHA-256 `C8F3CA2D886FA5F3108AAFA6ED584843B127E254D73FBC224AE37D7C6ADE7C34` queda congelado para continuar con el Paso 8.
+
+
+## Paso 8 — Cuenta de publicación y carga inicial
+
+### 8.1 Cuenta de publicación en QGIS
+
+Estado: **completado**.
+
+Se confirmó que no es obligatorio utilizar un OSGeo ID para este flujo. El desarrollador creó/accedió a su cuenta de publicación en `plugins.qgis.org` mediante GitHub OAuth usando la cuenta `santiamaster`.
+
+### 8.2 Acceso y permisos de publicación
+
+Estado: **completado**.
+
+Dentro de `My Plugins` aparece la opción para subir un nuevo plugin y el formulario oficial de carga está disponible.
+
+### 8.3 Preparación de la carga definitiva
+
+Estado: **completado**.
+
+Se verificó el checklist previo a la carga contra el candidato definitivo y el repositorio público.
+
+Candidato que debe seleccionarse:
+
+- Archivo: `ver_coordenadas-1.0.0.zip`
+- Tamaño: 48.800 bytes.
+- SHA-256: `C8F3CA2D886FA5F3108AAFA6ED584843B127E254D73FBC224AE37D7C6ADE7C34`
+
+Checklist del formulario oficial:
+
+- Estructura QGIS correcta, con carpeta superior `ver_coordenadas/`, `metadata.txt` y `__init__.py`: confirmado.
+- Repositorio público no vacío y con el mismo código fuente que el ZIP, excluyendo artefactos compilados: confirmado.
+- Descripción significativa en inglés: confirmado.
+- Enlaces `homepage`, `tracker` y `repository` válidos y públicos: confirmado.
+- Versión probada en QGIS y funcionando como se espera: confirmado.
+- Correo de contacto del plugin actualizado a `santiamaster@gmail.com`: confirmado.
+
+Configuración recomendada para el primer envío: mantener habilitadas todas las reglas de seguridad skippables por defecto y no desactivar ninguna preventivamente.
+
+### Próximo subpaso
+
+**8.4 — Subir Ver Coordenadas 1.0.0 al repositorio oficial de plugins de QGIS y conservar la respuesta inicial del portal.**
