@@ -369,3 +369,49 @@ Configuración recomendada para el primer envío: mantener habilitadas todas las
 ### Próximo subpaso
 
 **8.4 — Subir Ver Coordenadas 1.0.0 al repositorio oficial de plugins de QGIS y conservar la respuesta inicial del portal.**
+
+
+### 8.4 Carga inicial al repositorio oficial
+
+Estado: **completado**.
+
+La versión `1.0.0` de **Ver Coordenadas** fue subida correctamente al repositorio oficial de plugins de QGIS.
+
+Datos registrados por el portal:
+
+- Plugin ID: `6607`.
+- Versión: `1.0.0`.
+- Autor: Carlos Daniel Santiápichi Mastrolinardo.
+- Correo del autor: `santiamaster@gmail.com`.
+- Mantenedor: `santiamaster`.
+- Compatibilidad declarada: QGIS 4.2.0 a 4.99.0.
+- Estado inicial: validación automática en curso.
+
+### 8.5 Validación automática y seguridad
+
+Estado: **completado**.
+
+El repositorio oficial informó que todos los controles automáticos de seguridad y calidad fueron superados:
+
+- Checks passed: 5 / 5.
+- Files scanned: 34.
+- Resultado: listo para revisión por un aprobador.
+
+No se registraron fallos de seguridad ni de calidad que requieran modificar el paquete.
+
+### Requisito pendiente antes de la aprobación
+
+El repositorio solicita confirmar el correo de autor `santiamaster@gmail.com` antes de que el plugin pueda ser aprobado.
+
+El token/enlace de confirmación recibido por correo no se documenta en este repositorio.
+
+Una vez confirmado el correo, el único paso restante será esperar la revisión manual y confirmar el estado público del plugin.
+
+### Estado del Paso 8
+
+- 8.1: completado.
+- 8.2: completado.
+- 8.3: completado.
+- 8.4: completado.
+- 8.5: completado.
+- 8.6: pendiente de confirmación de correo y aprobación/publicación final.
