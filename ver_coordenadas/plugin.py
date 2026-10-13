@@ -1,6 +1,5 @@
 # Ver Coordenadas
-# Copyright (C) 2026 Secretaría de Minería de Salta
-# Desarrollado y mantenido por: Carlos Daniel Santiápichi Mastrolinardo
+# Copyright (C) 2026 Carlos Daniel Santiápichi Mastrolinardo
 # SPDX-License-Identifier: GPL-2.0-or-later
 #
 # Este programa es software libre: puede redistribuirlo y/o modificarlo
