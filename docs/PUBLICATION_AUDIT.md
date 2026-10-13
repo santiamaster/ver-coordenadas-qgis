@@ -284,3 +284,46 @@ Estado actualizado:
 - 7.5: completado nuevamente.
 - 7.6: completado nuevamente.
 - 7.7: pendiente de revisión final del nuevo candidato.
+
+
+### Repetición de 7.7 tras cambio de autoría
+
+Estado: **completado**.
+
+Se realizó la revisión final del nuevo candidato después de la actualización de autoría, contacto y responsabilidad de publicación.
+
+Candidato definitivo:
+
+- Archivo: `ver_coordenadas-1.0.0.zip`
+- Tamaño: 48.800 bytes.
+- SHA-256: `C8F3CA2D886FA5F3108AAFA6ED584843B127E254D73FBC224AE37D7C6ADE7C34`
+
+Checklist final:
+
+- Autor: Carlos Daniel Santiápichi Mastrolinardo.
+- Correo de contacto: `santiamaster@gmail.com`.
+- La Secretaría de Minería de Salta no figura dentro del paquete distribuible como autora, mantenedora ni responsable.
+- El repositorio público está bajo la cuenta `santiamaster`.
+- `metadata.txt`, `__init__.py`, `LICENSE` e `icon.png` están presentes.
+- `version=1.0.0`.
+- Compatibilidad declarada: QGIS 4.2 a 4.99.
+- Descripción y campo `about` en inglés.
+- Enlaces `homepage`, `repository` y `tracker` válidos y públicos.
+- Licencia GPL-2.0-or-later.
+- Sin dependencias Python externas.
+- Sin binarios ejecutables ni bibliotecas compiladas.
+- El ZIP contiene exactamente los diez archivos aprobados.
+- Las rutas internas son portables y están bajo `ver_coordenadas/`.
+- Los módulos Python compilan sintácticamente sin errores.
+- El contenido fuente del ZIP coincide con el repositorio. En Windows, los archivos de texto del ZIP usan CRLF por la configuración de checkout de Git; normalizados a LF, sus Git blob SHA coinciden exactamente con los blobs del repositorio. `icon.png` coincide byte a byte.
+- Suite automatizada previamente validada: 69 pruebas, 0 fallos y 0 errores.
+- Instalación limpia del nuevo candidato en QGIS 4.2: completada.
+- Pruebas de humo posteriores al cambio de autoría: 5/5 OK.
+
+El candidato anterior con SHA-256 `CA183AFFE65BC2771E688C57FC2793B88B9D70B6F973681D941BDAAB26F569B8` permanece supersedido y no debe publicarse.
+
+## Estado final tras la actualización de autoría
+
+**Paso 7 — COMPLETADO nuevamente.**
+
+El candidato con SHA-256 `C8F3CA2D886FA5F3108AAFA6ED584843B127E254D73FBC224AE37D7C6ADE7C34` queda congelado para continuar con el Paso 8.
