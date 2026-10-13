@@ -207,7 +207,7 @@ El formulario de errores solicita información como versión de QGIS, sistema op
 
 El formulario de mejoras solicita describir la necesidad, la mejora propuesta, el caso de uso y cualquier ejemplo o referencia que ayude a entenderla.
 
-Para consultas institucionales que no correspondan a un error o solicitud de mejora, puede utilizar el correo **mineriayenergia@produccionsalta.gob.ar**.
+Para consultas institucionales que no correspondan a un error o solicitud de mejora, puede utilizar el correo **santiamaster@gmail.com**.
 
 ## Desarrollo y contribuciones
 
@@ -215,15 +215,18 @@ La documentación para desarrolladores se mantiene separada de esta guía de uso
 
 ## Autoría
 
-**Secretaría de Minería de Salta**  
-Desarrollado y mantenido por: **Carlos Daniel Santiápichi Mastrolinardo**  
-Contacto: **mineriayenergia@produccionsalta.gob.ar**
+Desarrollado, mantenido y publicado por: **Carlos Daniel Santiápichi Mastrolinardo**  
+Contacto: **santiamaster@gmail.com**
+
+**Afiliación profesional:** Secretaría de Minería de Salta.
+
+La mención de la Secretaría de Minería de Salta se limita a la afiliación laboral del desarrollador. El complemento se publica a título personal y la autoría, el mantenimiento y la responsabilidad sobre su publicación corresponden exclusivamente a Carlos Daniel Santiápichi Mastrolinardo.
 
 ### Asistencia de inteligencia artificial
 
 Durante el desarrollo del complemento se utilizó **ChatGPT de OpenAI** como herramienta de apoyo para tareas de análisis, diseño, revisión de código, documentación y planificación de pruebas.
 
-Las decisiones de diseño, la validación funcional, las pruebas en QGIS corresponden al desarrollador y a la Secretaría de Minería de Salta.
+Las decisiones de diseño, la validación funcional y las pruebas en QGIS corresponden al desarrollador.
 
 La asistencia de IA se realizó mediante ChatGPT durante el ciclo de desarrollo de la versión 1.0.0.
 
