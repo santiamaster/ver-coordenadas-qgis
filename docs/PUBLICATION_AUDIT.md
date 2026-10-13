@@ -228,3 +228,32 @@ Por este motivo se reabre parcialmente el Paso 7:
 - 7.7: pendiente de revisión final del nuevo candidato.
 
 La carga del Paso 8 debe permanecer detenida hasta completar nuevamente 7.4–7.7.
+
+
+### Reconstrucción del candidato tras el cambio de autoría
+
+Se generó un nuevo ZIP candidato después de actualizar la autoría y el correo de contacto:
+
+- Archivo: `ver_coordenadas-1.0.0.zip`
+- Tamaño: 48.800 bytes.
+- SHA-256: `C8F3CA2D886FA5F3108AAFA6ED584843B127E254D73FBC224AE37D7C6ADE7C34`
+
+La inspección directa del artefacto confirmó:
+
+- Integridad ZIP: OK.
+- Contiene exactamente los diez archivos aprobados.
+- Todas las rutas internas usan `/` y están bajo `ver_coordenadas/`.
+- No hay rutas absolutas ni secuencias `../`.
+- Los siete módulos Python compilan sintácticamente sin errores.
+- `metadata.txt` declara como autor a Carlos Daniel Santiápichi Mastrolinardo.
+- `metadata.txt` usa `santiamaster@gmail.com` como correo de contacto.
+- No quedan referencias a la Secretaría de Minería de Salta ni al correo institucional dentro del paquete distribuible.
+- Los encabezados de copyright de los módulos Python están a nombre de Carlos Daniel Santiápichi Mastrolinardo.
+- `icon.png` continúa siendo un PNG válido de 256 × 256 px.
+
+Estado actualizado:
+
+- 7.4: completado nuevamente.
+- 7.5: completado nuevamente.
+- 7.6: pendiente de instalación limpia del nuevo ZIP.
+- 7.7: pendiente de revisión final del nuevo candidato.
