@@ -74,6 +74,9 @@ Comprobaciones realizadas:
 - `qgisMinimumVersion=4.2`.
 - Se declaró explícitamente `qgisMaximumVersion=4.99` para identificar la versión como compatible con la línea QGIS 4.x en el repositorio oficial.
 - `version=1.0.0` y el changelog corresponden a la primera versión pública.
+- Autor de publicación: Carlos Daniel Santiápichi Mastrolinardo.
+- Correo de contacto: `santiamaster@gmail.com`.
+- La Secretaría de Minería de Salta se menciona únicamente como afiliación profesional del desarrollador y no como autora, mantenedora ni responsable de la publicación.
 - `LICENSE` está incluido como archivo independiente dentro de la carpeta del plugin.
 
 ### 7.4 Construcción del ZIP candidato de publicación
@@ -195,3 +198,33 @@ Observación: el repositorio oficial ejecutará sus propios controles automátic
 **Paso 7 — Pruebas de publicación y seguridad: COMPLETADO.**
 
 El complemento y su ZIP candidato quedan listos para avanzar al **Paso 8 — OSGEO ID y preparación de la subida al repositorio oficial de QGIS**.
+
+
+## Cambio de autoría previo a la publicación
+
+Antes de iniciar la carga en el repositorio oficial de QGIS se modificó la titularidad de publicación de la versión 1.0.0.
+
+La publicación pasa a realizarse a título personal por **Carlos Daniel Santiápichi Mastrolinardo**. La Secretaría de Minería de Salta queda mencionada únicamente como afiliación profesional del desarrollador y no como autora, mantenedora ni responsable de la publicación.
+
+Cambios aplicados:
+
+- `metadata.txt`: `author=Carlos Daniel Santiápichi Mastrolinardo`.
+- `metadata.txt`: `email=santiamaster@gmail.com`.
+- Encabezados de copyright de los módulos Python: Carlos Daniel Santiápichi Mastrolinardo.
+- README: autoría, mantenimiento, publicación y responsabilidad personal; correo de contacto actualizado.
+- Configuración de Issues: correo de contacto actualizado.
+- CHANGELOG: registra el cambio de titularidad de publicación.
+
+### Consecuencia sobre el candidato anterior
+
+El ZIP con SHA-256 `CA183AFFE65BC2771E688C57FC2793B88B9D70B6F973681D941BDAAB26F569B8` queda **supersedido y no debe subirse** al repositorio oficial, porque contiene los metadatos y encabezados de autoría anteriores.
+
+Por este motivo se reabre parcialmente el Paso 7:
+
+- 7.1–7.3: siguen siendo válidos, con la actualización de autor y correo indicada arriba.
+- 7.4: pendiente de reconstruir el ZIP.
+- 7.5: pendiente de inspeccionar el nuevo ZIP.
+- 7.6: pendiente de instalación limpia y prueba de humo del nuevo ZIP.
+- 7.7: pendiente de revisión final del nuevo candidato.
+
+La carga del Paso 8 debe permanecer detenida hasta completar nuevamente 7.4–7.7.
