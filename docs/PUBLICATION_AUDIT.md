@@ -415,3 +415,22 @@ Una vez confirmado el correo, el único paso restante será esperar la revisión
 - 8.4: completado.
 - 8.5: completado.
 - 8.6: pendiente de confirmación de correo y aprobación/publicación final.
+
+
+### 8.6 Publicación final
+
+Estado: **completado**.
+
+La versión `1.0.0` de **Ver Coordenadas** fue aprobada y publicada en el repositorio oficial de plugins de QGIS.
+
+Datos públicos confirmados:
+
+- Plugin ID: `6607`.
+- Última versión estable: `1.0.0`.
+- Compatibilidad: QGIS 4.2.0 a 4.99.0.
+- Autor: Carlos Daniel Santiápichi Mastrolinardo.
+- Mantenedor: `santiamaster`.
+- Página pública: `https://plugins.qgis.org/plugins/ver_coordenadas/`.
+- El portal ofrece descarga pública de la versión publicada.
+
+Con esto queda cerrado el Paso 8.
